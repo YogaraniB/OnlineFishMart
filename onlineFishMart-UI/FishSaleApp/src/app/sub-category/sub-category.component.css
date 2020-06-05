@@ -1,0 +1,45 @@
+.navigation {
+    padding-top: 15px;
+    color: #164769;
+}
+.categoriesheader {
+    color: #164769;
+    font-weight: 700;
+    padding-bottom: 15px;
+    text-align: left!important;
+    padding-top: 15px;
+}
+.line {
+    border-bottom: 2px solid #164769;
+    padding-bottom: 20px;
+    font-weight: 600;
+    color: #164769;
+}
+.categoriesdetail {
+    font-size: 13px;
+    padding-top: 20px;
+    font-weight: 600;
+    color: #164769;  
+}
+.paragraph {
+    font-size: 13px;
+    padding-top: 20px;
+    font-weight: 700;
+    color: #164769;  
+}
+.price {
+    color: #164769;
+    font-weight: 700;
+    text-align: left!important;
+    padding-top: 20px;
+
+}
+.btn-success {
+    color: #fff;
+    background-color: #164769;
+    border-color: #164769;
+    position: relative;
+    top: 31px;
+    width: 129px;
+    font-size: 15px;
+}

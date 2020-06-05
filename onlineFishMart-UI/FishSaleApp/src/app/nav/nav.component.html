@@ -1,0 +1,215 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand logo" href="#">OnlineFishMart</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="col-md-3">
+        </div>
+        <div class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2 searchbox" formControlName="email" type="search" placeholder="Search"
+            aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </div>
+        <ul class="navbar-nav ml-auto navss">
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: #ec490a;
+            font-weight: 700;
+            font-size: 14px;" (click)="login()">Login & SignUp <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item" data-toggle="modal" data-target="#myModal">
+            <a class="nav-link " style="color: #ec490a;
+            font-weight: 700;
+            font-size: 14px;cursor:pointer;">Cart&nbsp;<span class="badge badge-pill badge-primary" *ngIf="badgevalue">1</span></a>
+          </li>
+        </ul>
+  
+      </div>
+    </div>
+  </nav>
+  <div class=" categories">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container collapse navbar-collapse">
+        <ul class="navbar-nav navss">
+          <li class="nav-item disc">
+            <a class="nav-link" href="#" style="color: #164769;
+          font-weight: 700;
+          font-size: 14px;">Fish Combos </a>
+          </li>
+          <li class="nav-item disc">
+            <a class="nav-link " href="#" style="color: #164769;
+          font-weight: 700;
+          font-size: 14px;">Small Fish</a>
+          </li>
+          <li class="nav-item disc">
+            <a class="nav-link" href="#" style="color: #164769;
+          font-weight: 700;
+          font-size: 14px;">Live Fish</a>
+          </li>
+          <li class="nav-item disc">
+            <a class="nav-link" href="#" style="color: #164769;
+          font-weight: 700;
+          font-size: 14px;">Fresh Water Fish </a>
+          </li>
+          <li class="nav-item disc">
+            <a class="nav-link" href="#" style="color: #164769;
+          font-weight: 700;
+          font-size: 14px;">Crabs</a>
+          </li>
+          <li class="nav-item disc">
+            <a class="nav-link" href="#" style="color: #164769;
+          font-weight: 700;
+          font-size: 14px;">Exotic Fish</a>
+          </li>
+          <li class="nav-item disc">
+            <a class="nav-link" href="#" style="color: #164769;
+          font-weight: 700;
+          font-size: 14px;">Imported Fish</a>
+          </li>
+          <li class="nav-item disc">
+            <a class="nav-link" href="#" style="color: #164769;
+          font-weight: 700;
+          font-size: 14px;">Prawns</a>
+          </li>
+          <li class="nav-item disc">
+            <a class="nav-link" href="#" style="color: #164769;
+          font-weight: 700;
+          font-size: 14px;">Flat Fish</a>
+          </li>
+          <li class="nav-item disc">
+            <a class="nav-link" href="#" style="color: #164769;
+          font-weight: 700;
+          font-size: 14px;">Boneless Fish</a>
+          </li>
+          <li class="nav-item disc">
+            <a class="nav-link" href="#" style="color: #164769;
+          font-weight: 700;
+          font-size: 14px;">Big Fish</a>
+          </li>
+          <li class="nav-item disc">
+            <a class="nav-link" href="#" style="color: #164769;
+          font-weight: 700;
+          font-size: 14px;">Live Crabs</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+  
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title text-center" style="padding-left:46%;"><strong>Cart</strong></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body checkout-->
+        <div class="modal-body">
+          <h4 class="text-center"><strong>Your Order</strong></h4>
+          <hr>
+          <h4><strong>Prawns/ 1 Prawn White Medium Peeled and deveined</strong></h4>
+          <h5>Gross wt:500 gm
+  
+          </h5>
+          <h5>Net wt:500 gm</h5>
+          <h5>$ 500</h5>
+          <h5>Cutting Type: &nbsp;Slices</h5>
+          <hr>
+          <div class="col-md-6"></div>
+          <div class="col-md-3">
+            <h5>Sub Total</h5>
+            <h5>Delivery Fee</h5>
+            <h5>Total</h5>
+          </div>
+          <div class="col-md-3">
+            <h5><strong>$ 500</strong></h5>
+            <h5><strong>$ 30</strong></h5>
+            <h5><strong>$ 530</strong></h5>
+          </div>
+          <br><br>
+          <button type="buttton" (click)="toOrder()" class="btn buttons"
+            style="width:100%;margin-top: 46px;font-size:12px"><strong>
+              Checkout</strong></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- The Modal -->
+  <div class="modal" id="myModal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title text-center" style="padding-left:46%;"><strong>Cart</strong></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- modal-body placeorder -->
+        <div class="modal-body">
+          <h4><strong>Delivery Information</strong></h4>
+          <h5>OnlineFishMart Seafood Delivery May 17 2020 at 11:00:00 am to
+          </h5>
+          <div class="form-group">
+            <label for="first">Address</label>
+            <input type="text" class="form-control" placeholder="28 West Street,Tirunelveli">
+          </div>
+          <div class="form-group">
+            <label for="first">Phone</label>
+            <input type="text" class="form-control" placeholder="7397540154">
+          </div>
+          <div class="form-group">
+            <label for="first">Delivery Instruction</label>
+            <input type="text" class="form-control">
+          </div>
+  
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio">Cash On delivery
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio">Pay Using Credit / Debit Card/ Net Banking /
+              UPI / Wallets
+            </label>
+          </div>
+          <br><br>
+          <button type="buttton" class="btn buttons"
+            style="width:100%;margin-top: 46px;font-size:12px" (click)="toSuccess()"><strong>
+              Place Order</strong></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- The Modal -->
+  <div class="modal" id="myModal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title text-center" style="padding-left:46%;"><strong>Cart</strong></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- modal-body placeorder -->
+        <div class="modal-body">
+          <h4><strong>Sucess Message</strong></h4>
+          <h5>Your Order will be Delivered Soon!!!</h5>
+  
+        </div>
+  
+      </div>
+    </div>
+  </div>

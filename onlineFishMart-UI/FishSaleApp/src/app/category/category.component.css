@@ -1,0 +1,53 @@
+.categoriesheader {
+    color: #164769;
+    font-weight: 700;
+    padding-bottom: 15px;
+    text-align: left!important;
+    padding-top: 15px;
+}
+.categoriesdetail {
+    color: #164769;
+    font-size: 11px;
+    font-weight: 500;
+}
+.categoriesdetails {
+    color: #164769;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: -16px;
+}
+.card {
+    border-radius: 5px;
+    box-shadow: 2px 1px #d5d2c3;
+}
+.categoriessubheader {
+    color: #164769;
+    font-weight: 700; 
+}
+.categoriessubheaders {
+    color: #164769;
+    font-weight: 700;  
+    font-size:12px;
+}
+.subheader {
+    padding:0px;
+}
+.cat-list {
+    margin-bottom:15px;
+    cursor: pointer;
+}
+.price {
+    color: #164769;
+    font-weight: 700;
+    text-align: left!important;
+
+}
+.btn-success {
+    color: #fff;
+    background-color: #164769;
+    border-color: #164769;
+}
+.navigation {
+    color: #164769;
+}
+

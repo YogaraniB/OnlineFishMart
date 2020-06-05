@@ -1,0 +1,117 @@
+.logo {
+    color: #ec490a;
+    font-weight: 600;
+}
+.searchbox {
+    font-size: 14px;
+    width: 295px;
+}
+.navbar-nav>li {
+    float: left;
+    font-size: 14px;
+    font-weight: 500;
+}
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 27px;
+    line-height: inherit;
+    white-space: nowrap;
+    font-weight: 700;
+}
+.catclick 
+{
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #164769;
+}
+.categories {
+    background-color: #bfbfbf;
+    position: relative;
+    top: -20px;
+    padding: 0px;
+}
+.carousel {
+    position: relative;
+    top: -40px;
+}
+.cat-list {
+    margin-bottom:15px;
+    cursor: pointer;
+}
+.card-body {
+    height:120px;
+}
+li {
+    list-style-type: none;
+}
+ul {
+    padding-left:0px;
+}
+.infos {
+    padding-top:25px;
+    padding-bottom:25px;
+}
+.background {
+    background-color: #bfbfbf;
+}
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: #ec490a;
+    border-color: #ec490a;
+}
+.btn-outline-success {
+    background-color: #ec490a;
+    border-color: #ec490a;
+    color:white;
+}
+.bg-light {
+    background-color: #164769!important;
+
+}
+.categoriesheader {
+    color: #164769;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+.categoriessubheader {
+    color: #164769;
+    font-weight: 700; 
+}
+.categoriesdetail {
+        color: #164769;
+        font-size: 11px;
+        font-weight: 500;
+}
+.liststyle {
+    font-size: 13px;
+    color: #164769;
+    font-weight: 600;
+}
+.footer {
+    background-color: #164769;
+    padding: 10px;
+    color: #ec490a;
+    font-weight: 600;
+}
+.footertext {
+    font-size: 16px;
+}
+.disc {
+    padding-right: 14px;
+}
+.badge-primary {
+    color: #fff;
+    background-color: #ec490a;
+}
+.totals {
+    
+    padding-right: 37px;
+}
+.buttons {
+    background-color:#ec490a;
+    color:white;
+}

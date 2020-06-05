@@ -1,0 +1,17 @@
+.forms {
+    padding: 50px;
+    border: 1px solid #164769;;
+    background-color: #f3f3f3;
+}
+.buttons {
+    background-color:#ec490a;
+    color:white;
+}
+label {
+    color: #164769;
+}
+.signup {
+    color: #ec490a;
+    font-weight: 700;
+    padding-bottom: 8px;
+}

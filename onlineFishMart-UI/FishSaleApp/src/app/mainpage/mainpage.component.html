@@ -1,0 +1,32 @@
+<!-- Navbar -->
+<div>
+    <app-nav (logins)="logins()" [badgevalue]="badgevalue"></app-nav>
+</div>
+<!-- Navbar -->
+<!-- content-pages -->
+<div *ngIf="HomePage">
+    <app-homepage (categories)="categories()"></app-homepage>
+
+</div>
+<div *ngIf="categoryPage">
+    <app-category (categoriesBack)="categoriesBack()" (subcategories)="subcategories()"></app-category>
+</div>
+<div *ngIf="subCategoryPage">
+    <app-sub-category (tologin)="subCattoLogin($event)" (cartAdd)="cartAdd($event)" (subcategoriesBack)="categories()">
+    </app-sub-category>
+</div>
+<div *ngIf="login">
+    <app-login (logintoHome)="categoriesBack()" (toAdmin)="toAdmin()" (cusDetails)="cusDetails()"></app-login>
+</div>
+<div *ngIf="customerdetail">
+    <app-customerdetail (toLogin)="logins()"></app-customerdetail>
+</div>
+<div *ngIf="admin">
+    <app-admin></app-admin>
+</div>
+<!-- content-pages -->
+<!-- Footer -->
+<div>
+    <app-footer></app-footer>
+</div>
+<!-- Footer -->

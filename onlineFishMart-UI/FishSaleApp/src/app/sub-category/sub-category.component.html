@@ -1,0 +1,48 @@
+<div class="container">
+    <h3 class="navigation"><i (click)="subcatBack()" class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;Home/
+        Prawns/ <span class="categoriesheader">Prawn White Medium Peeled and deveined</span>
+    </h3>
+    <div class="row" style="padding-top:15px;">
+        <div class="col-md-6">
+            <img class="card-img-top" src="../../assets/images/prawn1.jpg" alt="Card image cap" style="height:283px">
+        </div>
+        <div class="col-md-6">
+            <h4 class="text-center line">Prawn White Medium Peeled and deveined</h4>
+            <p class="categoriesdetail">Prawn White Medium / whole White prawns 50/55 count pcs / kg / Eral Big
+                Tiger
+                Prawns 23-25pcs
+                / kg Big Tiger Prawns 15-20pcs / kg Prawn White / Eral Small whole</p>
+            <div class="col-md-6">
+                <p class="paragraph"> Gross Weight:<span class="span"> 500 gm</span></p>
+                <p class="paragraph">Cutting Type</p>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optradio">Whole
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optradio">Cleaned
+                    </label>
+                </div>
+                <h3 class="price">
+                    $ 750
+                </h3>
+            </div>
+            <div class="col-md-6">
+                <p class="paragraph"> Net Weight:<span class=""> 500 gm</span></p>
+                <div *ngIf="addCart">
+                    <button type="button" class="btn btn-success" (click)="addcart()">Add to Cart</button>
+                </div>
+                <div *ngIf="buyNow">
+                    <button type="button" class="btn btn-success" (click)="toLogin()">Buy Now</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>

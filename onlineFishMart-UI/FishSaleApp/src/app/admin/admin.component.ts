@@ -19,7 +19,7 @@ export class AdminComponent implements OnInit {
   constructor(private catService: CategoriesService) { }
 
   ngOnInit(): void {
-
+console.log("Hai");
     this.cat = this.catService.getCarsSmall();
 
     this.cols = [

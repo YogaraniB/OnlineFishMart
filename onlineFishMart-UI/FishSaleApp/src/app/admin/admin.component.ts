@@ -31,6 +31,7 @@ export class AdminComponent implements OnInit {
         { field: 'description', header: 'Description' },
 
     ];
+    console.log(this.cols);
 
   }
 

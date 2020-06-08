@@ -1,22 +1,10 @@
 package com.tvm.OnlineFishMart.OnlineFishMart.Model;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-import org.springframework.web.multipart.MultipartFile;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonView;
-import com.tvm.OnlineFishMart.OnlineFishMart.Model.File.FileModel;
-import com.tvm.OnlineFishMart.OnlineFishMart.Model.File.View;
 
 
 @EntityListeners(AuditingEntityListener.class)

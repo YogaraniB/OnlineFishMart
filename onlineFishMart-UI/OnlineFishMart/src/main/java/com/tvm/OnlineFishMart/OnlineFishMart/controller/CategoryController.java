@@ -1,16 +1,8 @@
 package com.tvm.OnlineFishMart.OnlineFishMart.controller;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
-import javax.persistence.EntityManager;
-
-import org.hibernate.Session;
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;

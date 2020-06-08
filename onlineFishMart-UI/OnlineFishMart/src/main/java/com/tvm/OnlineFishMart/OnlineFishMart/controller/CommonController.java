@@ -43,7 +43,7 @@ public class CommonController {
 
 	private static Logger logger = Logger.getLogger(CommonController.class);
 
-	@RequestMapping("/")
+	@RequestMapping("/api/v1")
 	public String index() {
 		System.out.println("Index");
 		return "Welcome to Fish Mart Project !!! 8012";

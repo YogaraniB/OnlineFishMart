@@ -31,11 +31,12 @@ import org.springframework.web.multipart.MultipartFile;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.Authorization;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Api(value = "Fish Mart Controller", description = "REST Apis related to Fish Mart Entity!!!!")
 @org.springframework.web.bind.annotation.RestController
 @CrossOrigin("*")
-
+@EnableSwagger2
 @Validated
 //use @Validated annotation on top of controller so it is applicable to all methods in it.
 public class CommonController {

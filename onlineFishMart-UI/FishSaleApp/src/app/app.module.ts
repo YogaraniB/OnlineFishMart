@@ -17,6 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AdminComponent } from './admin/admin.component';
 import {TableModule} from 'primeng/table';
+import {ToastModule} from 'primeng/toast';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
 
 
 @NgModule({
@@ -34,12 +37,15 @@ import {TableModule} from 'primeng/table';
   ],
   imports: [
     BrowserModule,
+    MessagesModule,
+    MessageModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     CalendarModule,
     ReactiveFormsModule,DialogModule,
     HttpClientModule,
-    TableModule
+    TableModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

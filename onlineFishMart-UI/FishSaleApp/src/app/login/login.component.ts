@@ -3,6 +3,9 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
+import { UserSignupService } from '../Services/user-signup.service';
+
+
 
 
 @Component({
@@ -15,13 +18,16 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   submitted = false;
   displayBasic = false;
+  massage: string;
+
   @Output() cusDetails = new EventEmitter<String>();
   @Output() logintoHome = new EventEmitter<String>();
   @Output() toAdmin = new EventEmitter<String>();
 
 
   constructor(private fb: FormBuilder,
-    private http: HttpClient, private router: Router) {
+    private http: HttpClient, private router: Router,private signUp: UserSignupService,
+    ) {
 
   }
 
@@ -48,14 +54,28 @@ export class LoginComponent implements OnInit {
   get l() { return this.loginForm.controls; }
 
 
-  cusdetails() {
-    this.submitted = true;
+  signup() {
+    
+    const datas = {
+      'address': this.angForm.value.address,
+      'email': this.angForm.value.email,
+      'password': this.angForm.value.password,
+      'phone': +this.angForm.value.phone,
+      'userName': this.angForm.value.name
+    };
+    this.signUp.userSignup(datas).subscribe(
+      (data) => { 
+        this.submitted = true;
+        this.massage = 'Data saved Successfully';
+        //this.messageService.add({severity:'success', summary: 'Success Message', detail:'Order submitted'});    
+        this.angForm.reset(); 
+      },
 
-    // stop here if form is invalid
-    if (this.angForm.invalid) {
-      return;
-    }
-    // this.cusDetails.emit();
+      (error) => {
+
+      }
+    );
+  
   }
 
   homepage() {

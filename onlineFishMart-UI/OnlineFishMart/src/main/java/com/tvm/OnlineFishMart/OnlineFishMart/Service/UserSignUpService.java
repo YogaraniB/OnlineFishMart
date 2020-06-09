@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.tvm.OnlineFishMart.OnlineFishMart.Model.UserSignUp;
 import com.tvm.OnlineFishMart.OnlineFishMart.Repository.UserSignUpRepo;
+import com.tvm.OnlineFishMart.OnlineFishMart.web.ResourceNotFoundException;
 
 
 @Service
@@ -45,6 +46,8 @@ public class UserSignUpService {
 
 	// get an EmployeeProfile by id
 	public UserSignUp findOne(Integer empid) {
+		Optional<UserSignUp> ob = userSignUpRepo.findById(empid);
+		ob.orElseThrow(() -> new ResourceNotFoundException("No employee found with employee id " + empid));
 		return userSignUpRepo.getOne(empid);
 	}
 

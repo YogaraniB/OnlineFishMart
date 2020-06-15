@@ -69,6 +69,7 @@ export class LoginComponent implements OnInit {
         this.massage = 'Data saved Successfully';
         //this.messageService.add({severity:'success', summary: 'Success Message', detail:'Order submitted'});    
         this.angForm.reset(); 
+        this.cusDetails.emit();
       },
 
       (error) => {

@@ -1,5 +1,6 @@
 package com.tvm.OnlineFishMart.OnlineFishMart.controller;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,10 +46,12 @@ public class CategoryController {
 
 	private static Logger logger = Logger.getLogger(CategoryController.class);
 
-	@GetMapping("/getCategoryById/{empId}")
-	public Category getById(@PathVariable(value = "empId") Long empId) {
-		logger.debug("Getting an Employee " + empId);
-		return categoryService.findOne(empId);
+	@GetMapping("/getCategoryById/{categoryId}")
+	public Category getById(@PathVariable(value = "categoryId") Long categoryId) throws IOException {
+		logger.debug("Getting an Employee " + categoryId);
+		Category li=categoryService.findOne(categoryId);
+		getCategoryListWithImage(li.getId());
+		return categoryService.findOne(categoryId);
 	}
 	@PostMapping("/Categories")
 	public Category insert(@RequestBody Category i) {
@@ -93,4 +96,34 @@ public class CategoryController {
 				.body(new ByteArrayResource(newb.getFile()));
 	}
 
+	@PostMapping(value="/uploadimageCategory", consumes = {"multipart/form-data"})
+	public String uploadMultipartFilewithImage(@RequestParam("uploadfile") MultipartFile file,
+			@RequestParam String categoryName,@RequestParam String categoryDescription) {
+		try {
+			Category ca=new Category( categoryName,categoryDescription,file.getBytes());
+			categoryService.save(ca);
+//			FileModel filemode = new FileModel(file.getOriginalFilename(), file.getContentType(), file.getBytes());
+//			fileRepository.save(filemode);
+			return "File Saved Successfully! -Id is " +ca.getId();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "Failed";
+		}
+	}
+	
+	@GetMapping("/getSingleCategory/{fileId}")
+	public ResponseEntity<Resource> getCategoryListWithImage(@PathVariable Long fileId) throws IOException {
+		Category li=categoryService.findOne(fileId);
+//	      byte [] data = li.getImgid();
+//	      ByteArrayInputStream bis = new ByteArrayInputStream(data);
+//	      BufferedImage bImage2 = ImageIO.read(bis);
+//	      ImageIO.write(bImage2, "jpg", new File("output.jpg") );
+//	      System.out.println("image created");
+	      return ResponseEntity.ok().contentType(MediaType.parseMediaType("image/png"))
+					.header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" +li.getCategoryName() + "\"")
+					.body(new ByteArrayResource(li.getImgid()));
+	}
+	
+	
 }

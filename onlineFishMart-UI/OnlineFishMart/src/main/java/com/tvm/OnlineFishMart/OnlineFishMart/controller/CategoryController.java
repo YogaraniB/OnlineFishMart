@@ -3,8 +3,8 @@ package com.tvm.OnlineFishMart.OnlineFishMart.controller;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
-
-import org.jboss.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
@@ -44,7 +44,7 @@ public class CategoryController {
 	@Autowired
 	com.tvm.OnlineFishMart.OnlineFishMart.Model.File.FileService fileRepository;
 
-	private static Logger logger = Logger.getLogger(CategoryController.class);
+	private static Logger logger = LoggerFactory.getLogger(CategoryController.class);
 
 	@GetMapping("/getCategoryById/{categoryId}")
 	public Category getById(@PathVariable(value = "categoryId") Long categoryId) throws IOException {
@@ -115,6 +115,7 @@ public class CategoryController {
 	@GetMapping("/getSingleCategory/{fileId}")
 	public ResponseEntity<Resource> getCategoryListWithImage(@PathVariable Long fileId) throws IOException {
 		Category li=categoryService.findOne(fileId);
+		logger.info("Getting image file");
 //	      byte [] data = li.getImgid();
 //	      ByteArrayInputStream bis = new ByteArrayInputStream(data);
 //	      BufferedImage bImage2 = ImageIO.read(bis);

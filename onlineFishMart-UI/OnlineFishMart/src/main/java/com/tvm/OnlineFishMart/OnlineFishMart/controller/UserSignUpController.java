@@ -1,10 +1,8 @@
 package com.tvm.OnlineFishMart.OnlineFishMart.controller;
 
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
-
-import org.jboss.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -26,7 +24,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @RequestMapping("/api/v1")
 @EnableSwagger2
 @CrossOrigin("*")
-@Api(value = "Fish Mart", description = "REST Apis related to User Sign up Entity!!!!")
+@Api(value = "Online Shopping", description = "REST Apis related to User Sign up Entity!!!!")
 @Validated
 //use @Validated annotation on top of controller so it is applicable to all methods in it.
 public class UserSignUpController {
@@ -34,7 +32,7 @@ public class UserSignUpController {
 	@Autowired
 	UserSignUpService userSignUpService;
 
-	private static Logger logger = Logger.getLogger(UserSignUpController.class);
+	private static Logger logger = LoggerFactory.getLogger(UserSignUpController.class);
 
 	@GetMapping("/getUserSignUpById/{empId}")
 	public UserSignUp getById(@PathVariable(value = "empId") Integer empId) {
